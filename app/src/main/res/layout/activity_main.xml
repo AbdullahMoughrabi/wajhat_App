@@ -5,79 +5,217 @@
     android:id="@+id/main_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".Activities.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_bar_view"
+    <ScrollView
+        android:id="@+id/main_page_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@android:color/holo_green_dark"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/menu_btn"
-            style="@style/Widget.AppCompat.ImageButton"
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/holo_green_dark"
-            android:padding="10dp"
-            android:src="@drawable/open_menu_6208"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/holo_green_dark"
-            android:importantForAccessibility="no"
-            android:padding="12dp"
-            android:src="@drawable/search_2907"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/add_to_cart_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_dark"
-            android:importantForAccessibility="no"
-            android:padding="12dp"
-            android:src="@drawable/black_shopping_cart_10933"
-            app:layout_constraintBottom_toBottomOf="@+id/search_btn"
-            app:layout_constraintStart_toEndOf="@+id/search_btn"
-            app:layout_constraintTop_toTopOf="@+id/search_btn" />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/background_of_topbar"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_dark"
-            android:importantForAccessibility="no"
-            android:padding="12dp"
-            android:src="@drawable/user_3294"
-            app:layout_constraintBottom_toBottomOf="@+id/add_to_cart_btn"
-            app:layout_constraintStart_toEndOf="@+id/add_to_cart_btn"
-            app:layout_constraintTop_toTopOf="@+id/add_to_cart_btn" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/menu_btn"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#1A3D36"
+                    android:src="@drawable/open_menu_6208"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.2"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/search_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#1A3D36"
+                    android:importantForAccessibility="no"
+                    android:padding="0dp"
+                    android:src="@drawable/search_2907"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.20"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/add_to_cart_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#1A3D36"
+                    android:importantForAccessibility="no"
+                    android:padding="0dp"
+                    android:src="@drawable/black_shopping_cart_10933"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_btn"
+                    app:layout_constraintStart_toEndOf="@+id/search_btn"
+                    app:layout_constraintTop_toTopOf="@+id/search_btn"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="#1A3D36"
+                    android:importantForAccessibility="no"
+                    android:padding="0dp"
+                    android:src="@drawable/user_3294"
+                    app:layout_constraintBottom_toBottomOf="@+id/add_to_cart_btn"
+                    app:layout_constraintStart_toEndOf="@+id/add_to_cart_btn"
+                    app:layout_constraintTop_toTopOf="@+id/add_to_cart_btn"
+                    app:layout_constraintVertical_bias="0.17000002"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="160dp"
+                    android:layout_height="225dp"
+                    android:importantForAccessibility="no"
+                    android:layoutDirection="rtl"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wajhat_logo"
+                    app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                    app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/navbar_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/hand_made_btn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:drawableTop="@drawable/hand_made"
+                        android:fontFamily="@font/el_messiri"
+                        android:padding="2dp"
+                        android:text="صناعة يدوية"
+                        android:textColor="@color/green_btn"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/candles_btn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:drawableTop="@drawable/candle"
+                        android:fontFamily="@font/el_messiri"
+                        android:padding="2dp"
+                        android:text="شموع"
+                        android:textColor="@color/green_btn"
+                        tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
+
+                    <Button
+                        android:id="@+id/plants_btn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:drawableTop="@drawable/plant_in_a_pot"
+                        android:fontFamily="@font/el_messiri"
+                        android:padding="2dp"
+                        android:text="نباتات"
+                        android:textColor="@color/green_btn"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/toys_btn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:drawableTop="@drawable/teddy_bear"
+                        android:fontFamily="@font/el_messiri"
+                        android:padding="2dp"
+                        android:text="ألعاب"
+                        android:textColor="@color/green_btn"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/presents_btn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:drawableTop="@drawable/presents"
+                        android:fontFamily="@font/el_messiri"
+                        android:padding="2dp"
+                        android:text="هدايا أخرى"
+                        android:textColor="@color/green_btn"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/product_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_of_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutDirection="rtl"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
