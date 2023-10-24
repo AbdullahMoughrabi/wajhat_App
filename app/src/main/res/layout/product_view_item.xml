@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/product_item_card"
-        android:layout_width="275dp"
-        android:layout_height="225dp"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
         android:layoutDirection="ltr"
         app:cardCornerRadius="15dp">
 
@@ -21,7 +21,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/bar_of_product_view"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:background="@color/green_topbar"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
@@ -45,7 +45,9 @@
                 android:id="@+id/add_to_cart_btn_of_product_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/product_view_btn_background"
                 android:padding="12dp"
                 android:src="@drawable/black_shopping_cart_10933"
@@ -62,7 +64,7 @@
                 android:fontFamily="@font/el_messiri"
                 android:text="عنوان المنتج"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/bar_of_product_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/bar_of_product_view"
@@ -75,7 +77,9 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/el_messiri"
                 android:text="سعر الجديد"
-                android:textColor="@color/white"
+                android:textColor="@color/price_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/title_of_product_view"
                 app:layout_constraintTop_toBottomOf="@+id/title_of_product_view" />
@@ -88,9 +92,10 @@
                 android:fontFamily="@font/el_messiri"
                 android:text="السعر القديم"
                 android:textColor="@android:color/holo_red_dark"
-                app:layout_constraintBottom_toBottomOf="@+id/new_price_of_product_view"
-                app:layout_constraintEnd_toStartOf="@+id/new_price_of_product_view"
-                app:layout_constraintTop_toTopOf="@+id/new_price_of_product_view" />
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/new_price_of_product_view"
+                app:layout_constraintEnd_toStartOf="@+id/new_price_of_product_view" />
 
             <TextView
                 android:id="@+id/discount_of_product_veiw_text"

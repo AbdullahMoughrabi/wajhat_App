@@ -33,11 +33,11 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         final ProductsModel productsData = productsList[position];
-        holder.title_of_product.setText(productsList[position].getTitle_of_product());
-        holder.new_price_of_product.setText(productsList[position].getNew_price_of_product());
-        holder.old_price_of_product.setText(productsList[position].getOld_price_of_product());
-        holder.discount_product.setText(productsList[position].getDiscount_of_product());
-        holder.image_of_product.setImageResource(productsList[position].getImage_of_product());
+        holder.title_of_product.setText(productsData.getTitle_of_product());
+        holder.new_price_of_product.setText(productsData.getNew_price_of_product());
+        holder.old_price_of_product.setText(productsData.getOld_price_of_product());
+        holder.discount_product.setText(productsData.getDiscount_of_product());
+        holder.image_of_product.setImageResource(productsData.getImage_of_product());
     }
 
     @Override

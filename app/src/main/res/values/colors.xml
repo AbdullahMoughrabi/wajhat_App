@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green_topbar">#1A3D36</color>
     <color name="green_btn">#669583</color>
+    <color name="price_color">#34cc9b</color>
 </resources>

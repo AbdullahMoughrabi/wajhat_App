@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.wajhat.Adapters.BecomeRecentAdapter;
 import com.example.wajhat.Adapters.ProductsAdapter;
+import com.example.wajhat.Models.BecomeRecentModel;
 import com.example.wajhat.Models.ProductsModel;
 import com.example.wajhat.R;
 import com.example.wajhat.Utils.ProductsSpacer;
@@ -30,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewProducts.setAdapter(productsAdapter);
         ProductsSpacer itemSpacer = new ProductsSpacer(25);
         recyclerViewProducts.addItemDecoration(itemSpacer);
+
+        // Become Recent View
+        RecyclerView recyclerViewBecomeRecent = findViewById(R.id.recycler_view_of_become_recent);
+        BecomeRecentModel[] becomeRecentList = BecomeRecentModel.products;
+        BecomeRecentAdapter becomeRecentAdapter = new BecomeRecentAdapter(becomeRecentList);
+        recyclerViewBecomeRecent.setHasFixedSize(true);
+        recyclerViewBecomeRecent.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewBecomeRecent.setAdapter(becomeRecentAdapter);
+        recyclerViewBecomeRecent.addItemDecoration(itemSpacer);
 
 
     }
