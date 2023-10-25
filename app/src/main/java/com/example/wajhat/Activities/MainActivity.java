@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.wajhat.Adapters.BecomeRecentAdapter;
+import com.example.wajhat.Adapters.MostPopularAdapter;
 import com.example.wajhat.Adapters.ProductsAdapter;
 import com.example.wajhat.Models.BecomeRecentModel;
+import com.example.wajhat.Models.MostPopularModel;
 import com.example.wajhat.Models.ProductsModel;
 import com.example.wajhat.R;
 import com.example.wajhat.Utils.ProductsSpacer;
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewBecomeRecent.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL, false));
         recyclerViewBecomeRecent.setAdapter(becomeRecentAdapter);
         recyclerViewBecomeRecent.addItemDecoration(itemSpacer);
+
+        // Most Popular View
+        RecyclerView recyclerViewMostPopular = findViewById(R.id.recycler_view_of_most_popular);
+        MostPopularModel[] mostPopularList = MostPopularModel.products;
+        MostPopularAdapter mostPopularAdapter = new MostPopularAdapter(mostPopularList);
+        recyclerViewMostPopular.setHasFixedSize(true);
+        recyclerViewMostPopular.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL , false));
+        recyclerViewMostPopular.setAdapter(mostPopularAdapter);
+        recyclerViewMostPopular.addItemDecoration(itemSpacer);
 
 
     }
