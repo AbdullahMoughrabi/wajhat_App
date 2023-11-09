@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">wajhat</string>
+    <string name="title_of_candle_vanilia">شمع معطر برائحة الفانيليا</string>
+    <string name="candle_vanilia_price">115.000 ل.س</string>
+    <string name="text_test">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقة وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعة</string>
+    <string name="count_text">الكمية</string>
+    <string name="zero">0</string>
+    <string name="choose_size">اختر المقاس</string>
+    <string name="details_of_sizes">دليل المقاسات</string>
+    <string name="small_size_text">S</string>
+    <string name="medium_size_text">M</string>
+    <string name="large_size_text">L</string>
+    <string name="xl_size_text">XL</string>
+    <string name="xxl_size_text">XXL</string>
+    <string name="add_to_cart_texty">إضافة إلى السلة</string>
+    <string name="more_details_text">المزيد من التفاصيل</string>
+    <string name="big_point">●</string>
 </resources>

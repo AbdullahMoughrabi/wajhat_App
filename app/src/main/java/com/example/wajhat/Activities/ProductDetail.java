@@ -25,7 +25,7 @@ public class ProductDetail extends AppCompatActivity {
         recyclerViewImageOfProducts.setHasFixedSize(true);
         recyclerViewImageOfProducts.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL , false));
         recyclerViewImageOfProducts.setAdapter(imageProductAdapter);
-        ProductsSpacer itemSpacer = new ProductsSpacer(20);
+        ProductsSpacer itemSpacer = new ProductsSpacer(15);
         recyclerViewImageOfProducts.addItemDecoration(itemSpacer);
     }
 }
