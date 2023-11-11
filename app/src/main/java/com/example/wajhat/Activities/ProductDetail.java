@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.GridView;
 
 import com.example.wajhat.Adapters.ImageProductAdapter;
 import com.example.wajhat.Models.ImageProductModel;
@@ -27,5 +28,6 @@ public class ProductDetail extends AppCompatActivity {
         recyclerViewImageOfProducts.setAdapter(imageProductAdapter);
         ProductsSpacer itemSpacer = new ProductsSpacer(15);
         recyclerViewImageOfProducts.addItemDecoration(itemSpacer);
+
     }
 }

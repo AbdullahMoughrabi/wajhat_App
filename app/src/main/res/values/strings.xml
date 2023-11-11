@@ -15,4 +15,10 @@
     <string name="add_to_cart_texty">إضافة إلى السلة</string>
     <string name="more_details_text">المزيد من التفاصيل</string>
     <string name="big_point">●</string>
+    <string name="more_of_products_text">رؤيـة المزيد مـن المنتجات</string>
+    <string name="price_of_product">سعر المنتج</string>
+    <string name="name_of_product">اسم المنتج</string>
+    <string name="candle_product">شمع معطر</string>
+    <string name="price_85">85.000 ل.س</string>
+    <string name="price_50">50.000 ل.س</string>
 </resources>
